@@ -13,11 +13,13 @@ Light Video Compressor Library.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'elaziz.shehadeh@gmail.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  # SPM-compatible layout: sources live under light_compressor/Sources so the
+  # same files back both the Swift Package (Package.swift) and the CocoaPods
+  # fallback. Keep this path in sync with Package.swift's target path.
+  s.source_files = 'light_compressor/Sources/light_compressor/**/*'
   s.dependency 'Flutter'
-  s.platform = :ios, '11.0'
+  s.platform = :ios, '12.0'
 
-  # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
   s.swift_version = '5.0'
 end

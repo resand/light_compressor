@@ -24,6 +24,6 @@ flutter:
         package: com.abedelazizshe.light_compressor
         pluginClass: LightCompressorPlugin
       ios:
-        pluginClass: LightCompressorPlugin
+        pluginClass: SwiftLightCompressorPlugin
       macos:
         pluginClass: LightCompressorPlugin
