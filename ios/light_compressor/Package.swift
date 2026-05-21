@@ -10,7 +10,7 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "light_compressor",
+            name: "light-compressor",
             targets: ["light_compressor"]
         )
     ],
